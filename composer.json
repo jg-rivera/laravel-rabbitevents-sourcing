@@ -18,17 +18,10 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Jozi\\": "src/"
+            "Jozi\\": "src"
         },
         "files": [
             "src/helpers.php"
         ]
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "RandomPassword\\PasswordServiceProvider"
-            ]
-        }
     }
 }

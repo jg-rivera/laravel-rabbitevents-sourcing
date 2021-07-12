@@ -1,6 +1,6 @@
 <?php
 
-namespace Jozi\Events\StoredRabbitEvent;
+namespace Jozi\Events;
 
 use Exception;
 use Nuwber\Events\Event\ShouldPublish;
