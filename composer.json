@@ -1,0 +1,34 @@
+{
+    "name": "jozi/laravel-rabbitevents-sourcing",
+    "description": "Integration between nuwber's rabbitevents and spatie's laravel-event-sourcing library",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/lumen-framework": "^8.0",
+        "nuwber/rabbitevents": "^6.0",
+        "spatie/laravel-event-sourcing": "^5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jose Gabrielle Rivera",
+            "email": "rivera.jga10@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Jozi\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RandomPassword\\PasswordServiceProvider"
+            ]
+        }
+    }
+}
