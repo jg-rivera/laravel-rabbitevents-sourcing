@@ -1,6 +1,6 @@
 {
     "name": "jozi/laravel-rabbitevents-sourcing",
-    "description": "Integration between nuwber's rabbitevents and spatie's laravel-event-sourcing library",
+    "description": "Integration between nuwber/rabbitevents and spatie/laravel-event-sourcing packages",
     "type": "library",
     "require": {
         "php": "^8.0",

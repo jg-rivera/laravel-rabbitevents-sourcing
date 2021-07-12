@@ -2,9 +2,13 @@
 
 namespace Jozi\Events\StoredRabbitEvent;
 
+use Exception;
 use Nuwber\Events\Event\ShouldPublish;
 use Spatie\EventSourcing\StoredEvents\ShouldBeStored;
 
+/**
+ * Represents an event that will be stored and published to a RabbitMQ queue; given a string `$eventKey`.
+ */
 abstract class StoredRabbitEvent extends ShouldBeStored implements ShouldPublish
 {
     /**
@@ -16,6 +20,10 @@ abstract class StoredRabbitEvent extends ShouldBeStored implements ShouldPublish
 
     public function publishEventKey(): string
     {
+        if (empty($eventKey)) {
+            throw new Exception('Cannot have empty event key for StoredRabbitEvent');
+        }
+
         return $this->eventKey;
     }
 
