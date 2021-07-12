@@ -1,6 +1,6 @@
 <?php
 
-use Jozi\Events\StoredRabbitEvent\StoredRabbitEvent;
+use Jozi\Events\StoredRabbitEvent;
 
 class AccountCreated extends StoredRabbitEvent
 {
