@@ -3,16 +3,17 @@
 A simple integration between `nuwber/rabbitevents` and `spatie/laravel-event-sourcing`.
 Both are used to facilitate event sourcing and intraservice communication using RabbitMQ topic exchanges.
 
-## Acknowledgements
+## Installation
 
-- [nuwber/rabbitevents](https://github.com/nuwber/rabbitevents)
-- [spatie/laravel-event-sourcing](https://github.com/spatie/laravel-event-sourcing/)
+Using composer:
+
+```bash
+composer require jozi/laravel-rabbitevents-sourcing
+```
 
 ## Usage/Examples
 
 All stored and published events extends the `StoredRabbitEvent` class. These events will be handled for both event sourcing (`spatie/laravel-event-sourcing`) and publishing to RabbitMQ (`nuwber/rabbitevents`).
-
-For this class, a string `$eventKey` is explictly required for the event to be published. The `$eventKey` is the same as RabbitMQ's routing key.
 
 ```php
 use Jozi\Events\StoredRabbitEvent;
@@ -62,3 +63,12 @@ class Account extends Model
     }
 }
 ```
+
+## Acknowledgements
+
+- [nuwber/rabbitevents](https://github.com/nuwber/rabbitevents)
+- [spatie/laravel-event-sourcing](https://github.com/spatie/laravel-event-sourcing/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
