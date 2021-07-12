@@ -15,6 +15,8 @@ composer require jozi/laravel-rabbitevents-sourcing
 
 All stored and published events extends the `StoredRabbitEvent` class. These events will be handled for both event sourcing (`spatie/laravel-event-sourcing`) and publishing to RabbitMQ (`nuwber/rabbitevents`).
 
+For this class, a string `$eventKey` is explictly required for the event to be published. The `$eventKey` is the same as RabbitMQ's routing key.
+
 ```php
 use Jozi\Events\StoredRabbitEvent;
 
