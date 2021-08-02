@@ -16,7 +16,7 @@ abstract class StoredRabbitEvent extends ShouldBeStored implements ShouldPublish
      *
      * @var string
      */
-    public $eventKey;
+    protected $eventKey;
 
     public function publishEventKey(): string
     {
